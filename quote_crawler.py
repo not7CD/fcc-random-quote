@@ -1,4 +1,4 @@
-import os
+from bs4 import BeautifulSoup as bs
 from html.parser import HTMLParser
 
 """Getting contets of blockquote from all the html files"""
