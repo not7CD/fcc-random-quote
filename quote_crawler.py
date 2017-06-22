@@ -1,5 +1,5 @@
-from bs4 import BeautifulSoup as bs
-from html.parser import HTMLParser
+from bs4 import BeautifulSoup
+import urllib.request
 
 """Getting contets of blockquote from all the html files"""
 
@@ -10,9 +10,14 @@ def get_blockquote_from_file(file):
     pass
 
 
-def main():
+def main(index_html):
     """Main function"""
-    pass
+    # print(index_html)
+    soup = BeautifulSoup(index_html, "html.parser")
+    for link in soup.find_all('a'):
+        print(link)
+
 
 if __name__ == '__main__':
-    main()
+    html = urllib.request.urlopen("http://www.diveintopython3.net/").read()
+    main(html)
