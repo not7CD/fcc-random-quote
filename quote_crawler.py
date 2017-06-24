@@ -4,7 +4,6 @@ import json
 from bs4 import BeautifulSoup
 
 
-
 def get_blockquote_from_html(quote_html):
     """Extracts all blockquotes from given file.
         Returns tuple of lists."""
@@ -29,6 +28,7 @@ def get_blockquote_from_html(quote_html):
         # Let calling function handle it
         raise
 
+
 def clean_join(soup_list):
     """This function joins list to a string and cleans it from trailing whitespaces."""
     # Transform all elements to srings from bs.Tag
@@ -36,8 +36,6 @@ def clean_join(soup_list):
     join_str = ''.join(str_list)
     # Clean string from whitespaces and strip em dash from the front
     return join_str.strip().lstrip('—')
-
-
 
 
 def main(index_html, base_url):
@@ -53,7 +51,8 @@ def main(index_html, base_url):
                 # extract both quote and author
                 quote, author = get_blockquote_from_html(html)
                 # clean and append to list
-                quotes.append({'quote':clean_join(quote), 'author':clean_join(author)})
+                quotes.append({'quote': clean_join(quote),
+                               'author': clean_join(author)})
             except AttributeError:
                 # I DON'T CARE 😂😂😂
                 # print(err)
@@ -64,7 +63,6 @@ def main(index_html, base_url):
     # Save quotes to JSON file
     with open('quotes.json', 'w') as outfile:
         json.dump(quotes, outfile)
-
 
 
 if __name__ == '__main__':

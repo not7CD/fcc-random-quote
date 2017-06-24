@@ -1,4 +1,5 @@
 # fcc-random-quote
+
 - [x] Extract quotes from diveintopython3.org with BeautifulSoup
 - [x] Store data in json
 - [ ] Models or something?
