@@ -14,11 +14,10 @@ def get_blockquote_from_html(quote_html):
         # Delete all <span> tags
         for elt in quote('span'):
             elt.extract()
-        # Find position <br/> tag
-        br_tag = quote.br
-        br_ind = quote.contents.index(br_tag)
-        # Delete all </br>
+        # Find position of LAST <br/> tag
+        # Delete all <br/>
         for elt in quote('br'):
+            br_ind = quote.contents.index(elt)
             elt.extract()
         # Split <blockquote> contents by <br/> index
         split_quote = (quote.contents[:br_ind], quote.contents[br_ind:])
@@ -35,7 +34,7 @@ def clean_join(soup_list):
     str_list = [str(value) for value in soup_list]
     join_str = ''.join(str_list)
     # Clean string from whitespaces and strip em dash from the front
-    return join_str.strip().lstrip('–')
+    return join_str.strip().lstrip('—')
 
 
 
@@ -49,7 +48,7 @@ def main(index_html, base_url):
             html = urllib.request.urlopen(base_url + link['href']).read()
             try:
                 quote, author = get_blockquote_from_html(html)
-                print(clean_join(quote), clean_join(author))
+                print(clean_join(author))
             except AttributeError as err:
                 print(err)
         except urllib.error.HTTPError as err:
