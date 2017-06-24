@@ -6,19 +6,20 @@ from bs4 import BeautifulSoup
 
 def get_blockquote_from_html(quote_html):
     """Extracts all blockquotes from given file.
-        Returns list."""
+        Returns tuple of lists."""
     soup = BeautifulSoup(quote_html, "html.parser")
     try:
         # Try get block quote
         quote = soup.blockquote.p
         # Delete all <span> tags
-        for span in quote('span'):
-            span.extract()
+        for elt in quote('span'):
+            elt.extract()
         # Find position <br/> tag
-        br_tag = quote.find('br')
+        br_tag = quote.br
         br_ind = quote.contents.index(br_tag)
-        # Delete </br>
-        br_tag.extract()
+        # Delete all </br>
+        for elt in quote('br'):
+            elt.extract()
         # Split <blockquote> contents by <br/> index
         split_quote = (quote.contents[:br_ind], quote.contents[br_ind:])
         # Return both quote and author
@@ -29,14 +30,12 @@ def get_blockquote_from_html(quote_html):
         raise
 
 def clean_join(soup_list):
+    """This function joins list to a string and cleans it from trailing whitespaces."""
+    # Transform all elements to srings from bs.Tag
     str_list = [str(value) for value in soup_list]
-    join_str = soup_list
-    try:
-        join_str = ''.join(str_list)
-        return join_str
-    except Exception as err:
-        print(err)
-        raise
+    join_str = ''.join(str_list)
+    # Clean string from whitespaces and strip em dash from the front
+    return join_str.strip().lstrip('–')
 
 
 
