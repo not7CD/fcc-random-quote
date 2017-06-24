@@ -1,5 +1,6 @@
 """Getting contets of blockquote from all the html files"""
 import urllib.request
+import json
 from bs4 import BeautifulSoup
 
 
@@ -43,16 +44,26 @@ def main(index_html, base_url):
     """Main function"""
     # print(index_html)
     soup = BeautifulSoup(index_html, "html.parser")
+    quotes = []
     for link in soup.find_all('a'):
         try:
+            # open every url in htmlwebsite (very naive method)
             html = urllib.request.urlopen(base_url + link['href']).read()
             try:
+                # extract both quote and author
                 quote, author = get_blockquote_from_html(html)
-                print(clean_join(author))
-            except AttributeError as err:
-                print(err)
-        except urllib.error.HTTPError as err:
-            print(err)
+                # clean and append to list
+                quotes.append({'quote':clean_join(quote), 'author':clean_join(author)})
+            except AttributeError:
+                # I DON'T CARE 😂😂😂
+                # print(err)
+                pass
+        except urllib.error.HTTPError:
+            # print(err)
+            pass
+    # Save quotes to JSON file
+    with open('quotes.json', 'w') as outfile:
+        json.dump(quotes, outfile)
 
 
 
