@@ -8,38 +8,57 @@ def get_blockquote_from_html(quote_html):
     """Extracts all blockquotes from given file.
         Returns list."""
     soup = BeautifulSoup(quote_html, "html.parser")
-    quote = None
     try:
+        # Try get block quote
         quote = soup.blockquote.p
+        # Delete all <span> tags
         for span in quote('span'):
             span.extract()
+        # Find position <br/> tag
+        br_tag = quote.find('br')
+        br_ind = quote.contents.index(br_tag)
+        # Delete </br>
+        br_tag.extract()
+        # Split <blockquote> contents by <br/> index
+        split_quote = (quote.contents[:br_ind], quote.contents[br_ind:])
+        # Return both quote and author
+        return split_quote
+    except AttributeError as err:
+        print(err)
+        # Let calling function handle it
+        raise
 
-        print(list(quote.contents).index ('<br/>'))
+def clean_join(soup_list):
+    str_list = [str(value) for value in soup_list]
+    join_str = soup_list
+    try:
+        join_str = ''.join(str_list)
+        return join_str
+    except Exception as err:
+        print(err)
+        raise
 
-        # for i, c in enumerate(quote.contents):
-            # print(i, c)
-            # print(type(c.string))
-        # print(quote.contents[2])
-    except AttributeError as e:
-        print(e)
-    return quote
 
 
 
-def main(index_html):
+def main(index_html, URL):
     """Main function"""
     # print(index_html)
     soup = BeautifulSoup(index_html, "html.parser")
     for link in soup.find_all('a'):
         try:
-            HTML = urllib.request.urlopen("http://www.diveintopython3.net/" + link['href']).read()
-            quote = get_blockquote_from_html(HTML)
-            print(quote)
+            html = urllib.request.urlopen(URL + link['href']).read()
+            try:
+                quote, author = get_blockquote_from_html(html)
+                print(clean_join(quote), clean_join(author))
+            except AttributeError as e:
+                print(e)
         except urllib.error.HTTPError as e:
             print(e)
 
 
 
 if __name__ == '__main__':
-    HTML = urllib.request.urlopen("http://www.diveintopython3.net/").read()
-    main(HTML)
+    URL = "http://www.diveintopython3.net/"
+    HTML = urllib.request.urlopen(URL).read()
+    main(HTML, URL)
