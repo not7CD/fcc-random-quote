@@ -1,6 +1,6 @@
 """Getting contets of blockquote from all the html files"""
-from bs4 import BeautifulSoup
 import urllib.request
+from bs4 import BeautifulSoup
 
 
 
@@ -41,20 +41,20 @@ def clean_join(soup_list):
 
 
 
-def main(index_html, URL):
+def main(index_html, base_url):
     """Main function"""
     # print(index_html)
     soup = BeautifulSoup(index_html, "html.parser")
     for link in soup.find_all('a'):
         try:
-            html = urllib.request.urlopen(URL + link['href']).read()
+            html = urllib.request.urlopen(base_url + link['href']).read()
             try:
                 quote, author = get_blockquote_from_html(html)
                 print(clean_join(quote), clean_join(author))
-            except AttributeError as e:
-                print(e)
-        except urllib.error.HTTPError as e:
-            print(e)
+            except AttributeError as err:
+                print(err)
+        except urllib.error.HTTPError as err:
+            print(err)
 
 
 
