@@ -1,1 +1,69 @@
-[{"quote":"Isn’t this where we came in?","author":" Pink Floyd, The Wall"},{"quote":"<i lang=\"la\">Tempora mutantur nos et mutamur in illis.</i> (Times change, and we change with them.)","author":" ancient Roman proverb"},{"quote":"Don’t bury your burden in saintly silence. You have a problem?  Great. Rejoice, dive in, and investigate.","author":" <a href=\"http://en.wikiquote.org/wiki/Buddhism\">Ven. Henepola Gunaratana</a>"},{"quote":"Wonder is the foundation of all philosophy, inquiry its progress, ignorance its end.","author":" Michel de Montaigne"},{"quote":"Our imagination is stretched to the utmost, not, as in fiction, to imagine things which are not really there, but just to comprehend those things which are.","author":" <a href=\"http://en.wikiquote.org/wiki/Richard_Feynman\">Richard Feynman</a>"},{"quote":"I’m telling you this ’cause you’re one of my friends.\r\nMy alphabet starts where your alphabet ends!","author":" Dr. Seuss, On Beyond Zebra!"},{"quote":"Some people, when confronted with a problem, think “I know, I’ll use regular expressions.”  Now they have two problems.","author":" <a href=\"http://www.jwz.org/hacks/marginal.html\">Jamie Zawinski</a>"},{"quote":"My spelling is Wobbly. It’s good spelling but it Wobbles, and the letters get in the wrong places.","author":" Winnie-the-Pooh"},{"quote":"East is East, and West is West, and never the twain shall meet.","author":" <a href=\"http://en.wikiquote.org/wiki/Rudyard_Kipling\">Rudyard Kipling</a>"},{"quote":"Great fleas have little fleas upon their backs to bite ’em,And little fleas have lesser fleas, and so ad infinitum.","author":" Augustus De Morgan"},{"quote":"Certitude is not the test of certainty. We have been cocksure of many things that were not so.","author":" <a href=\"http://en.wikiquote.org/wiki/Oliver_Wendell_Holmes,_Jr.\">Oliver Wendell Holmes, Jr.</a>"},{"quote":"After one has played a vast quantity of notes and more notes, it is simplicity that emerges as the crowning reward of art.","author":" <a href=\"http://en.wikiquote.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin\">Frédéric Chopin</a>"},{"quote":"A nine mile walk is no joke, especially in the rain.","author":" Harry Kemelman, <cite>The Nine Mile Walk</cite>"},{"quote":"In the archonship of Aristaechmus, Draco enacted his ordinances.","author":" <a href=\"http://www.perseus.tufts.edu/cgi-bin/ptext?doc=Perseus:text:1999.01.0046;query=chapter%3D%235;layout=;loc=3.1\">Aristotle</a>"},{"quote":"Every Saturday since we’ve lived in this apartment, I have awakened at 6:15, poured myself a bowl of cereal, addeda quarter-cup of 2% milk, sat on <strong>this</strong> end of <strong>this</strong> couch, turned on BBC America, and watched Doctor Who.","author":" Sheldon, <a href=\"http://en.wikiquote.org/wiki/The_Big_Bang_Theory#The_Dumpling_Paradox_.5B1.07.5D\">The Big Bang Theory</a>"},{"quote":"A ruffled mind makes a restless pillow.","author":" Charlotte Brontë"},{"quote":"Words, words. They’re all we have to go on.","author":" <a href=\"http://www.imdb.com/title/tt0100519/quotes\">Rosencrantz and Guildenstern are Dead</a>"},{"quote":"You’ll find the shame is like the pain; you only feel it once.","author":" Marquise de Merteuil, <a href=\"http://www.imdb.com/title/tt0094947/quotes\"><cite>Dangerous Liaisons</cite></a>"},{"quote":"Life is pleasant. Death is peaceful. It’s the transition that’s troublesome.","author":" Isaac Asimov (attributed)"},{"quote":"My specialty is being right when other people are wrong.","author":" <a href=\"http://en.wikiquote.org/wiki/George_Bernard_Shaw\">George Bernard Shaw</a>"},{"quote":"Go forth on your path, as it exists only through your walking.","author":" St. Augustine of Hippo (attributed)"},{"quote":"Where’s the <kbd>ANY</kbd> key?","author":" <a href=\"http://www.wherestheanykey.co.uk\">variously attributed</a>"}]
+{
+	"quotes": [{
+		"quote": "Isn\u2019t this where we came in?",
+		"author": " Pink Floyd, The Wall"
+	}, {
+		"quote": "<i lang=\"la\">Tempora mutantur nos et mutamur in illis.</i> (Times change, and we change with them.)",
+		"author": " ancient Roman proverb"
+	}, {
+		"quote": "Don\u2019t bury your burden in saintly silence. You have a problem?  Great. Rejoice, dive in, and investigate.",
+		"author": " <a href=\"http://en.wikiquote.org/wiki/Buddhism\">Ven. Henepola Gunaratana</a>"
+	}, {
+		"quote": "Wonder is the foundation of all philosophy, inquiry its progress, ignorance its end.",
+		"author": " Michel de Montaigne"
+	}, {
+		"quote": "Our imagination is stretched to the utmost, not, as in fiction, to imagine things which are not really there, but just to comprehend those things which are.",
+		"author": " <a href=\"http://en.wikiquote.org/wiki/Richard_Feynman\">Richard Feynman</a>"
+	}, {
+		"quote": "I\u2019m telling you this \u2019cause you\u2019re one of my friends.\r\nMy alphabet starts where your alphabet ends!",
+		"author": " Dr. Seuss, On Beyond Zebra!"
+	}, {
+		"quote": "Some people, when confronted with a problem, think \u201cI know, I\u2019ll use regular expressions.\u201d  Now they have two problems.",
+		"author": " <a href=\"http://www.jwz.org/hacks/marginal.html\">Jamie Zawinski</a>"
+	}, {
+		"quote": "My spelling is Wobbly. It\u2019s good spelling but it Wobbles, and the letters get in the wrong places.",
+		"author": " Winnie-the-Pooh"
+	}, {
+		"quote": "East is East, and West is West, and never the twain shall meet.",
+		"author": " <a href=\"http://en.wikiquote.org/wiki/Rudyard_Kipling\">Rudyard Kipling</a>"
+	}, {
+		"quote": "Great fleas have little fleas upon their backs to bite \u2019em,And little fleas have lesser fleas, and so ad infinitum.",
+		"author": " Augustus De Morgan"
+	}, {
+		"quote": "Certitude is not the test of certainty. We have been cocksure of many things that were not so.",
+		"author": " <a href=\"http://en.wikiquote.org/wiki/Oliver_Wendell_Holmes,_Jr.\">Oliver Wendell Holmes, Jr.</a>"
+	}, {
+		"quote": "After one has played a vast quantity of notes and more notes, it is simplicity that emerges as the crowning reward of art.",
+		"author": " <a href=\"http://en.wikiquote.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin\">Fr\u00e9d\u00e9ric Chopin</a>"
+	}, {
+		"quote": "A nine mile walk is no joke, especially in the rain.",
+		"author": " Harry Kemelman, <cite>The Nine Mile Walk</cite>"
+	}, {
+		"quote": "In the archonship of Aristaechmus, Draco enacted his ordinances.",
+		"author": " <a href=\"http://www.perseus.tufts.edu/cgi-bin/ptext?doc=Perseus:text:1999.01.0046;query=chapter%3D%235;layout=;loc=3.1\">Aristotle</a>"
+	}, {
+		"quote": "Every Saturday since we\u2019ve lived in this apartment, I have awakened at 6:15, poured myself a bowl of cereal, addeda quarter-cup of 2% milk, sat on <strong>this</strong> end of <strong>this</strong> couch, turned on BBC America, and watched Doctor Who.",
+		"author": " Sheldon, <a href=\"http://en.wikiquote.org/wiki/The_Big_Bang_Theory#The_Dumpling_Paradox_.5B1.07.5D\">The Big Bang Theory</a>"
+	}, {
+		"quote": "A ruffled mind makes a restless pillow.",
+		"author": " Charlotte Bront\u00eb"
+	}, {
+		"quote": "Words, words. They\u2019re all we have to go on.",
+		"author": " <a href=\"http://www.imdb.com/title/tt0100519/quotes\">Rosencrantz and Guildenstern are Dead</a>"
+	}, {
+		"quote": "You\u2019ll find the shame is like the pain; you only feel it once.",
+		"author": " Marquise de Merteuil, <a href=\"http://www.imdb.com/title/tt0094947/quotes\"><cite>Dangerous Liaisons</cite></a>"
+	}, {
+		"quote": "Life is pleasant. Death is peaceful. It\u2019s the transition that\u2019s troublesome.",
+		"author": " Isaac Asimov (attributed)"
+	}, {
+		"quote": "My specialty is being right when other people are wrong.",
+		"author": " <a href=\"http://en.wikiquote.org/wiki/George_Bernard_Shaw\">George Bernard Shaw</a>"
+	}, {
+		"quote": "Go forth on your path, as it exists only through your walking.",
+		"author": " St. Augustine of Hippo (attributed)"
+	}, {
+		"quote": "Where\u2019s the <kbd>ANY</kbd> key?",
+		"author": " <a href=\"http://www.wherestheanykey.co.uk\">variously attributed</a>"
+	}]
+}
