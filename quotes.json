@@ -1,4 +1,4 @@
-[{
+quotes = '[{
   "quote": "Isn\u2019t this where we came in?",
   "author": " Pink Floyd, The Wall"
 }, {
@@ -64,4 +64,4 @@
 }, {
   "quote": "Where\u2019s the <kbd>ANY</kbd> key?",
   "author": " <a href=\"http://www.wherestheanykey.co.uk\">variously attributed</a>"
-}]
+}]';
