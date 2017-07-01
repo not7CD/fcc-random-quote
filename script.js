@@ -1,8 +1,8 @@
-rand_quote = function(quotes) {
+function rand_quote(quotes) {
   var i = Math.floor(Math.random() * quotes.length);
   $("#quote").html(quotes[i].quote);
   $("#author").html(quotes[i].author);
-};
+}
 
 $(document).ready(function() {
   var json_quotes = [];
@@ -11,5 +11,7 @@ $(document).ready(function() {
     rand_quote(json_quotes);
   });
 
-  $("#getQuote").on("click", rand_quote(json_quotes));
+  $("#getQuote").on("click", function () {
+    rand_quote(json_quotes);
+  });
 });
