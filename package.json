@@ -1,0 +1,25 @@
+{
+  "name": "random-quote",
+  "version": "1.0.0",
+  "description": "- [x] Extract quotes from diveintopython3.org with BeautifulSoup - [x] Store data in json - [ ] Models or something? - [ ] Build UI using Vue and Bootstrap - [ ] Deploy static website on Github Pages",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.15.3",
+    "serve-static": "^1.12.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/not7CD/fcc-random-quote.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/not7CD/fcc-random-quote/issues"
+  },
+  "homepage": "https://github.com/not7CD/fcc-random-quote#readme"
+}
