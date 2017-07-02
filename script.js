@@ -1,17 +1,17 @@
-function rand_quote(quotes) {
-  var i = Math.floor(Math.random() * quotes.length);
-  $("#quote").html(quotes[i].quote);
-  $("#author").html(quotes[i].author);
+function randomQuote(quotes) {
+  var randomNumber = Math.floor(Math.random() * quotes.length);
+  $("#quote").html(quotes[randomNumber].quote);
+  $("#author").html(quotes[randomNumber].author);
 }
 
 $(document).ready(function() {
-  var json_quotes = [];
-  $.getJSON( "quotes.json", function(data) {
-    json_quotes = data.quotes;
-    rand_quote(json_quotes);
+  var quoteArray = [];
+  $.getJSON("quotes.json", function(data) {
+    quoteArray = data.quotes;
+    randomQuote(quoteArray);
   });
 
-  $("#getQuote").on("click", function () {
-    rand_quote(json_quotes);
+  $("#getQuote").on("click", function() {
+    randomQuote(quoteArray);
   });
 });
