@@ -20,8 +20,8 @@
     <![endif]-->
 
   <style media="screen">
-    blockquote {
-      min-height: 8em;
+    #blockquote {
+      min-height: 10em;
     }
   </style>
 </head>
@@ -29,10 +29,10 @@
 <body>
   <div class="container">
     <h2>Random Quote</h2>
-    <p>taken from <q cite="">Dive in Python</q> by <a href="#">Mark Pilgrim</a></p>
+    <p>taken from <q cite="">Dive in Python</q> by <a href="https://en.wikipedia.org/wiki/Mark_Pilgrim">Mark Pilgrim</a></p>
     <br>
     <div class="row">
-      <div class="col-md-6">
+      <div id="blockquote" class="col-md-6">
         <blockquote class="blockquote-reverse" cite="http://">
           <p id="quote"></p>
           <footer id="author"></footer>
@@ -40,6 +40,11 @@
       </div>
       <div class="col-md-2">
         <button class="btn btn-primary" id="getQuote" type="button" name="button">Get new quote!</button>
+      </div>
+      <div class="col-md-12">
+        <h3>About</h3>
+        I extracted those quotes from <a href="http://www.diveintopython3.net/">diveintopython3.net</a> using simple web crawler built with <code>BeautifulSoup</code> and <code>urllib</code>.
+        Code can be found in <a href="https://github.com/not7cd/fcc-random-quote">GitHub repository</a>.
       </div>
     </div>
   </div>
