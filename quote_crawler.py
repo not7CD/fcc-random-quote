@@ -8,25 +8,23 @@ def get_blockquote_from_html(quote_html):
     """Extracts all blockquotes from given file.
         Returns tuple of lists."""
     soup = BeautifulSoup(quote_html, "html.parser")
+    # Try get block quote
     try:
-        # Try get block quote
         quote = soup.blockquote.p
-        # Delete all <span> tags
-        for elt in quote('span'):
-            elt.extract()
-        # Find position of LAST <br/> tag
-        # Delete all <br/>
-        for elt in quote('br'):
-            br_ind = quote.contents.index(elt)
-            elt.extract()
-        # Split <blockquote> contents by <br/> index
-        split_quote = (quote.contents[:br_ind], quote.contents[br_ind:])
-        # Return both quote and author
-        return split_quote
-    except AttributeError as err:
-        print(err)
-        # Let calling function handle it
+    except AttributeError:
         raise
+    for elt in quote('span'):
+        # Delete every <span> tags
+        elt.extract()
+    # Find position of LAST <br/> tag
+    for elt in quote('br'):
+        br_ind = quote.contents.index(elt)
+        # Delete every <br/>
+        elt.extract()
+    # Split <blockquote> contents by <br/> index
+    split_quote = (quote.contents[:br_ind], quote.contents[br_ind:])
+    # Return both quote and author
+    return split_quote
 
 
 def clean_join(soup_list):
@@ -54,13 +52,10 @@ def main(index_html, base_url):
                 quotes.append({'quote': clean_join(quote),
                                'author': clean_join(author)})
             except AttributeError:
-                # I DON'T CARE 😂😂😂
-                # print(err)
                 pass
         except urllib.error.HTTPError:
-            # print(err)
             pass
-    # Save quotes to JSON file
+    # Dump quotes to JSON file
     with open('quotes.json', 'w') as outfile:
         json.dump(quotes, outfile)
 
